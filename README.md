@@ -1,6 +1,6 @@
 # BellyButton Biodiversity
 
-Click this link to access the live webpage: https://imrtech.github.io/
+Click this link to access my live github page: https://imrtech.github.io/
 
 ## Project Overview
 In this project we created a dashboard that displayed information about bacteria found in human belly buttons from a sample of volunteers. The visualizations in the dashboard display each person's demographic information, top 10 bacteria found, how frequently they wash their belly button, and the bacteria cultures per sample.
