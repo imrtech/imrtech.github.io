@@ -1,15 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Greek gods</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+
 <body>
-    <div id="plot"></div>
-    <script src="data.js"></script>
-    <script src="plots.js"></script>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center", style="background-image: url('http://biodiversity.institute.ufl.edu/wp-content/uploads/2017/02/bacteria.jpg');">
+        <h1 style="color: white">Belly Button Biodiversity Dashboard</h1>
+        <p style="color: yellow">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-12">
+        <h2 style="color: rgb(66, 70, 70); font-size:30px">Project Overview</h2>
+        <p style="color: black; font-size:20px">Demographic information including bacteria collected from volunteer's belly buttons was collected. 
+          The data on this dashboard will display each volunteer's information and belly button biodiversity. <br><br>
+          The drop down list below labeled Test Subject ID can be used to select information from the different volunteers. As you select an ID, 
+          the charts below "Top 10 Bateria Cultures Found", "Belly Button Washing Frequency Scrubs per week" and "Bacteria Cultures Per Sample" will 
+          change according to your selection.
+          <br></p>
+      </div>
+
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well" style="color: rgb(34, 34, 36); background-color: rgb(240, 236, 219)">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body" style="color: rgb(34, 34, 36); background-color: rgb(240, 236, 219)" ></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="/static/js/charts.js"></script>
+
 </body>
+
 </html>
